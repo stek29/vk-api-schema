@@ -7353,8 +7353,8 @@
       }
     },
     {
-      "name": "groups.banUser",
-      "description": "Adds a user to a community blacklist.",
+      "name": "groups.ban",
+      "description": "Adds a user or group to a community blacklist.",
       "access_token_type": [
         "user"
       ],
@@ -7367,10 +7367,9 @@
           "required": true
         },
         {
-          "name": "user_id",
-          "description": "User ID.",
+          "name": "owner_id",
+          "description": "User/Group ID to be banned.",
           "type": "integer",
-          "minimum": 0,
           "required": true
         },
         {
@@ -7418,8 +7417,8 @@
       }
     },
     {
-      "name": "groups.unbanUser",
-      "description": "Removes a user from a community blacklist.",
+      "name": "groups.unban",
+      "description": "Removes a user or group from a community blacklist.",
       "access_token_type": [
         "user"
       ],
@@ -7433,9 +7432,8 @@
         },
         {
           "name": "user_id",
-          "description": "User ID.",
+          "description": "User/Group ID to be banned.",
           "type": "integer",
-          "minimum": 0,
           "required": true
         }
       ],
@@ -12102,17 +12100,16 @@
       }
     },
     {
-      "name": "account.banUser",
-      "description": "Adds user to the banlist.",
+      "name": "account.ban",
+      "description": "Adds user or group to the banlist.",
       "access_token_type": [
         "user"
       ],
       "parameters": [
         {
-          "name": "user_id",
-          "description": "User ID.",
+          "name": "owner_id",
+          "description": "User/Group ID to be banned.",
           "type": "integer",
-          "minimum": 0,
           "required": true
         }
       ],
@@ -12123,17 +12120,16 @@
       }
     },
     {
-      "name": "account.unbanUser",
-      "description": "Deletes user from the blacklist.",
+      "name": "account.unban",
+      "description": "Deletes user or group from the blacklist.",
       "access_token_type": [
         "user"
       ],
       "parameters": [
         {
           "name": "user_id",
-          "description": "User ID.",
+          "description": "User/Group ID to be unbanned.",
           "type": "integer",
-          "minimum": 0,
           "required": true
         }
       ],
