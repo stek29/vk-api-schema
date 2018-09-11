@@ -3058,36 +3058,26 @@
     },
     "groups_group_category_full": {
       "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer",
-          "description": "Category ID",
-          "minimum": 1
+      "allOf": [
+        {
+          "$ref": "#/definitions/groups_group_category"
         },
-        "name": {
-          "type": "string",
-          "description": "Category name"
-        },
-        "subcategories": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/groups_group_category"
-          }
-        },
-        "page_count": {
-          "type": "integer",
-          "description": "Pages number"
-        },
-        "page_previews": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/groups_group"
+        {
+          "properties": {
+            "page_count": {
+              "type": "integer",
+              "description": "Pages number"
+            },
+            "page_previews": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/groups_group"
+              }
+            }
           }
         }
-      },
+      ],
       "required": [
-        "id",
-        "name",
         "page_count",
         "page_previews"
       ],
