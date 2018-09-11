@@ -5167,6 +5167,62 @@
       }
     },
     {
+      "name": "wall.openComments",
+      "description": "Enables comments on post.",
+      "access_token_type": [
+        "user",
+        "group"
+      ],
+      "parameters": [
+        {
+          "name": "owner_id",
+          "description": "User ID or community ID.",
+          "type": "integer",
+          "required": true
+        },
+        {
+          "name": "post_id",
+          "description": "Post ID.",
+          "type": "integer",
+          "minimum": 0,
+          "required": true
+        }
+      ],
+      "responses": {
+        "response": {
+          "$ref": "responses.json#/definitions/ok_response"
+        }
+      }
+    },
+    {
+      "name": "wall.closeComments",
+      "description": "Disables comments on post.",
+      "access_token_type": [
+        "user",
+        "group"
+      ],
+      "parameters": [
+        {
+          "name": "owner_id",
+          "description": "User ID or community ID.",
+          "type": "integer",
+          "required": true
+        },
+        {
+          "name": "post_id",
+          "description": "Post ID.",
+          "type": "integer",
+          "minimum": 0,
+          "required": true
+        }
+      ],
+      "responses": {
+        "response": {
+          "$ref": "responses.json#/definitions/ok_response"
+        }
+      }
+    },
+    {
       "name": "wall.postAdsStealth",
       "description": "Allows to create hidden post which will not be shown on the community's wall and can be used for creating an ad with type \"Community post\".",
       "access_token_type": [
