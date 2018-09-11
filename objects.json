@@ -3798,7 +3798,7 @@
         "subject_list": {
           "type": "array",
           "items": {
-            "$ref": "#/definitions/groups_subject_item"
+            "$ref": "#/definitions/base_object_with_name"
           }
         },
         "rss": {
@@ -3808,19 +3808,6 @@
         "website": {
           "type": "string",
           "description": "Community website"
-        }
-      }
-    },
-    "groups_subject_item": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer",
-          "description": "Subject ID"
-        },
-        "name": {
-          "type": "string",
-          "description": "Subject title"
         }
       }
     },
