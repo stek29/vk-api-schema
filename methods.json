@@ -13062,7 +13062,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/messages_edit_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -14830,7 +14830,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/polls_addVote_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -14884,7 +14884,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/polls_deleteVote_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -15788,7 +15788,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/notifications_markAsViewed_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },

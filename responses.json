@@ -3235,15 +3235,6 @@
       },
       "additionalProperties": false
     },
-    "messages_edit_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Result",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      }
-    },
     "messages_markAsImportant_response": {
       "type": "object",
       "properties": {
@@ -3881,16 +3872,6 @@
               "description": "Time when user has been checked notifications last time"
             }
           }
-        }
-      },
-      "additionalProperties": false
-    },
-    "notifications_markAsViewed_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Result",
-          "$ref": "objects.json#/definitions/base_bool_int"
         }
       },
       "additionalProperties": false
@@ -4674,26 +4655,6 @@
       "properties": {
         "response": {
           "$ref": "objects.json#/definitions/polls_poll"
-        }
-      },
-      "additionalProperties": false
-    },
-    "polls_addVote_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Result",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      },
-      "additionalProperties": false
-    },
-    "polls_deleteVote_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Result",
-          "$ref": "objects.json#/definitions/base_bool_int"
         }
       },
       "additionalProperties": false
