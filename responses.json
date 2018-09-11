@@ -3032,7 +3032,7 @@
             "emails": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/messages_email"
+                "$ref": "objects.json#/definitions/messages_email"
               }
             },
             "conversations": {
@@ -3743,7 +3743,7 @@
             "items": {
               "type": "array",
               "items": {
-                "allOf": [
+                "oneOf": [
                   {
                     "$ref": "objects.json#/definitions/groups_group_full"
                   },

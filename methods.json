@@ -7449,7 +7449,8 @@
       "name": "groups.getBanned",
       "description": "Returns a list of users on a community blacklist.",
       "access_token_type": [
-        "user"
+        "user",
+        "group"
       ],
       "parameters": [
         {

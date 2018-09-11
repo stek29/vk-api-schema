@@ -5173,6 +5173,19 @@
         }
       ]
     },
+    "messages_email": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "integer": "Email ID"
+        },
+        "address": {
+          "type": "string",
+          "description": "Email address"
+        }
+      }
+    },
     "newsfeed_newsfeed_item_type": {
       "type": "string",
       "description": "Item type",
