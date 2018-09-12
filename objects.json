@@ -6947,7 +6947,7 @@
     "photos_photo_sizes": {
       "type": "object",
       "properties": {
-        "src": {
+        "url": {
           "type": "string",
           "description": "URL of the image"
         },
