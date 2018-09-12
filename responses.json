@@ -2860,26 +2860,6 @@
       },
       "additionalProperties": false
     },
-    "market_deleteComment_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Returns 1 if request has been processed successfully (0 if the comment is not found)",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      },
-      "additionalProperties": false
-    },
-    "market_restoreComment_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Returns 1 if request has been processed successfully (0 if the comment is not found)",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      },
-      "additionalProperties": false
-    },
     "market_getCategories_response": {
       "type": "object",
       "properties": {
@@ -4476,26 +4456,6 @@
       },
       "additionalProperties": false
     },
-    "photos_deleteComment_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Returns 1 if request has been processed successfully, 0 if the comment is not found",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      },
-      "additionalProperties": false
-    },
-    "photos_restoreComment_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Returns 1 if request has been processed successfully, 0 if the comment is not found",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      },
-      "additionalProperties": false
-    },
     "photos_getTags_response": {
       "type": "object",
       "properties": {
@@ -4877,16 +4837,6 @@
           "additionalProperties": false
         }
       }
-    },
-    "users_isAppUser_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Information whether the user have installed an app",
-          "$ref": "objects.json#/definitions/base_bool_int"
-        }
-      },
-      "additionalProperties": false
     },
     "users_getSubscriptions_response": {
       "type": "object",
@@ -5494,16 +5444,6 @@
         "response": {
           "type": "integer",
           "description": "Created comment ID"
-        }
-      },
-      "additionalProperties": false
-    },
-    "video_restoreComment_response": {
-      "type": "object",
-      "properties": {
-        "response": {
-          "description": "Returns 1 if request has been processed successfully, 0 if the comment is not found",
-          "$ref": "objects.json#/definitions/base_bool_int"
         }
       },
       "additionalProperties": false

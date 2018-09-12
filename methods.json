@@ -477,7 +477,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/users_isAppUser_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -4793,7 +4793,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/photos_deleteComment_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -4818,7 +4818,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/photos_restoreComment_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -10602,7 +10602,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/video_restoreComment_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -18729,7 +18729,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/market_deleteComment_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
@@ -18756,7 +18756,7 @@
       ],
       "responses": {
         "response": {
-          "$ref": "responses.json#/definitions/market_restoreComment_response"
+          "$ref": "responses.json#/definitions/ok_response"
         }
       }
     },
