@@ -1955,8 +1955,8 @@
           "description": "Likes number"
         },
         "user_likes": {
-          "type": "integer",
-          "description": "Information whether current uer has liked the post"
+          "type": "#/definitions/base_bool_int",
+          "description": "Information whether current user has liked the post"
         },
         "can_like": {
           "$ref": "#/definitions/base_bool_int",
