@@ -2928,7 +2928,7 @@
             "items": {
               "type": "array",
               "items": {
-                "$ref": "objects.json#/definitions/messages_conversation_with_message"
+                "$ref": "objects.json#/definitions/messages_conversation"
               }
             },
             "profiles": {
@@ -2972,7 +2972,7 @@
             "items": {
               "type": "array",
               "items": {
-                "$ref": "objects.json#/definitions/messages_conversation_with_message"
+                "$ref": "objects.json#/definitions/messages_conversation"
               }
             }
           },
@@ -3064,6 +3064,69 @@
               "$ref": "objects.json#/definitions/base_bool_int"
             }
           }
+        }
+      }
+    },
+    "messages_getConversationMembers_response": {
+      "type": "object",
+      "properties": {
+        "response": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "description": "Total number"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "objects.json#/definitions/messages_conversation_member",
+                "description": "Conversation members"
+              }
+            },
+            "profiles": {
+              "type": "array",
+              "items": {
+                "$ref": "objects.json#/definitions/users_user"
+              }
+            },
+            "groups": {
+              "type": "array",
+              "items": {
+                "$ref": "objects.json#/definitions/groups_group"
+              }
+            }
+          },
+          "required": [
+            "count",
+            "items"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "messages_searchConversations_response": {
+      "type": "object",
+      "properties": {
+        "response": {
+          "type": "object",
+          "properties": {
+            "count": {
+              "type": "integer",
+              "description": "Total number"
+            },
+            "items": {
+              "type": "array",
+              "items": {
+                "$ref": "objects.json#/definitions/messages_conversation"
+              }
+            }
+          },
+          "required": [
+            "count",
+            "items"
+          ],
+          "additionalProperties": false
         }
       }
     },

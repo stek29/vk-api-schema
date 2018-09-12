@@ -4768,15 +4768,80 @@
         }
       }
     },
-    "messages_dialog": {
+    "messages_conversation_can_write": {
       "type": "object",
       "properties": {
-        "unread": {
-          "type": "integer",
-          "description": "Information whether unread messages are in the dialog"
+        "allowed": {
+          "$ref": "#/definitions/base_bool_int"
         },
-        "message": {
-          "$ref": "#/definitions/messages_message"
+        "reason": {
+          "$ref": "#/definitions/messages_conversation_can_write_reason"
+        }
+      },
+      "required": [
+        "allowed"
+      ],
+      "additionalProperties": false
+    },
+    "messages_conversation_can_write_reason": {
+      "type": "integer",
+      "description": "Error code for allowed=false",
+      "enum": [
+        18,
+        900,
+        901,
+        902,
+        915,
+        916,
+        917,
+        918,
+        203
+      ],
+      "enumNames": [
+        "the user is deleted or blocked",
+        "can't send message to user from blacklist",
+        "the user has denied messages from the community",
+        "the user has closed messages using privacy settings",
+        "messages are disabled in the community",
+        "messages are blocked in the community",
+        "no access to conversation",
+        "no access to e-mail",
+        "no access to the community"
+      ]
+    },
+    "messages_chat_settings": {
+      "type": "object",
+      "properties": {
+        "members_count": {
+          "type": "integer",
+          "description": "Count of members in chat"
+        },
+        "title": {
+          "type": "string",
+          "description": "Chat title"
+        },
+        "state": {
+          "$ref": "#/definitions/messages_chat_settings_state",
+          "description": "Current user state"
+        },
+        "photo": {
+          "$ref": "#/definitions/messages_chat_settings_photo"
+        },
+        "is_group_channel": {
+          "$ref": "#/definitions/base_bool_int",
+          "description": "Information whether comversation is group channel"
+        },
+        "pinned_message": {
+          "$ref": "#/definitions/messages_pinned_message"
+        }
+      }
+    },
+    "messages_conversation": {
+      "type": "object",
+      "properties": {
+        "unread_count": {
+          "type": "integer",
+          "description": "Count of unread messages are in the dialog"
         },
         "in_read": {
           "type": "integer",
@@ -4793,6 +4858,15 @@
         "unanswered": {
           "description": "Is it an unanswered dialog",
           "$ref": "#/definitions/base_bool_int"
+        },
+        "push_settings": {
+          "$ref": "#/definitions/messages_chat_push_settings"
+        },
+        "can_write": {
+          "$ref": "#/definitions/messages_conversation_can_write"
+        },
+        "chat_settings": {
+          "$ref": "#/definitions/messages_chat_settings"
         }
       }
     },
@@ -5064,6 +5138,34 @@
         "text"
       ]
     },
+    "messages_conversation_member": {
+      "type": "object",
+      "properties": {
+        "member_id": {
+          "type": "integer",
+          "description": "Conversation member ID"
+        },
+        "invited_by": {
+          "type": "integer",
+          "description": "ID of the member who invited this member to the conversation"
+        },
+        "join_date": {
+          "type": "integer",
+          "description": "Date of joining the conversation"
+        },
+        "is_admin": {
+          "$ref": "#/definitions/base_bool_int",
+          "description": "Information whether the member is conversation admin"
+        },
+        "can_kick": {
+          "$ref": "#/definitions/base_bool_int",
+          "description": "Information whether current user can kick the member"
+        }
+      },
+      "required": [
+        "member_id"
+      ]
+    },
     "messages_message_action": {
       "type": "object",
       "properties": {
@@ -5097,17 +5199,6 @@
       "required": [
         "type"
       ]
-    },
-    "messages_conversation_with_message": {
-      "type": "object",
-      "properties": {
-        "conversation": {
-          "$ref": "#/definitions/messages_conversation"
-        },
-        "last_message": {
-          "$ref": "#/definitions/messages_message"
-        }
-      }
     },
     "messages_chat_settings_photo": {
       "type": "object",
