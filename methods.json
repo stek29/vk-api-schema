@@ -12882,8 +12882,11 @@
         },
         {
           "name": "forward_messages",
-          "description": "ID of forwarded messages, separated with a comma. Listed messages of the sender will be shown in the message body at the recipient's. Example: \"123,431,544\"",
-          "type": "string"
+          "description": "ID of forwarded messages. Listed messages of the sender will be shown in the message body at the recipient's. Example: \"123,431,544\"",
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
         },
         {
           "name": "sticker_id",
@@ -17551,7 +17554,10 @@
           "name": "ids",
           "description": "IDs requested ads, campaigns, clients or account, separated with a comma, depending on the value set in 'ids_type'. Maximum 2000 objects.",
           "required": true,
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         {
           "name": "period",
@@ -17617,7 +17623,10 @@
           "name": "ids",
           "description": "IDs requested ads or campaigns, separated with a comma, depending on the value set in 'ids_type'. Maximum 2000 objects.",
           "required": true,
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         {
           "name": "period",
@@ -17673,7 +17682,10 @@
           "name": "ads_ids",
           "description": "Ads IDS separated by comma.",
           "required": true,
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       ],
       "errors": [
@@ -17922,7 +17934,10 @@
         {
           "name": "ids",
           "description": "Objects IDs separated by commas. If the parameter is passed, 'q, country, cities' should not be passed.",
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         {
           "name": "q",
@@ -17937,7 +17952,10 @@
         {
           "name": "cities",
           "description": "IDs of cities where objects are searched in, separated with a comma.",
-          "type": "string"
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         },
         {
           "name": "lang",
